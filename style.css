@@ -272,10 +272,15 @@ footer a {
 
 .scroll-down-arrow {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
-    color: white;
-    animation: bounce 2s infinite;
+    cursor: pointer;
+    animation: bounce 1s infinite;
 }
+.scroll-down-arrow svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
