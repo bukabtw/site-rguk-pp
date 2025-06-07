@@ -16,15 +16,17 @@ header {
     background-color: #000;
     margin-left: 20px;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .logo {
-    width: 150px;
-    margin-left: -20px;
+    width: 100px;
+    margin-left: 0px;
 }
 
 header nav {
@@ -65,7 +67,7 @@ header nav a:hover {
     background-color: #f9f9f9; 
     width: 200px; 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-    z-index: 1; 
+    z-index: 1000; 
     border-radius: 4px; 
     padding: 5px 0; 
     transition: opacity 0.3s ease 0.05s, transform 0.3s ease 0.3s;
@@ -172,39 +174,39 @@ footer a {
 /*MAIN SECTION*/
 .main-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
-  padding: 20px;
+  padding: 40px 0;
   box-sizing: border-box;
 }
 
 .main-container {
-  width: 2500px;              
-  height: 1150px;             
-  border-radius: 30px;
+  width: 97vw;
+  height: 85vh;
   background-image: url("photo/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(80%);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  brightness: 25%;
+  border-radius: 30px;
+  overflow: hidden;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
 }
-
 
 .main-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
+  border-radius: 30px;
 }
 
 .main-content {
