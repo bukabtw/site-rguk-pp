@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /*HEADER*/
@@ -25,8 +25,14 @@ header {
 }
 
 .logo {
-    width: 100px;
-    margin-left: 0px;
+    width: 145px;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.logo img {
+  max-width:120px;
+  height:auto;
 }
 
 header nav {
@@ -45,14 +51,20 @@ header nav > ul > li {
 }
 
 header nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    padding: 5px 10px; 
-    border-radius: 4px;  
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 0.3px;
 }
 
 header nav a:hover {
-    background-color: #555; 
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
 }
 
 .dropdown {
@@ -104,7 +116,7 @@ header nav a:hover {
 
 .arrow {
     margin-left: 5px; 
-    font-size: 0.7em; 
+    font-size: 0.35em; 
 }
 
 @keyframes bounce {
@@ -387,14 +399,14 @@ footer a {
   align-items: center;
   justify-content: center;
   background-color: black;
-  padding: 40px 0;
+  padding: 30px 0;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .main-container {
   width: 97vw;
-  height: 85vh;
+  height: 90vh;
   background-image: url("photo/background.jpg");
   background-size: cover;
   background-position: center;
@@ -415,21 +427,24 @@ footer a {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
-  border-radius: 30px;
+  border-radius: 16px;
   pointer-events: none;
 }
 
 .main-content {
+  max-width: 1700px;
   position: relative;
   z-index: 2;
   text-align: center;
   color: white;
-  padding: 40px 60px;
+  padding: 30px 20px 80px;
 }
 
 .main-content h1 {
   font-size: clamp(1rem, 2.5vw, 3rem);
   margin: 0;
+  font-weight: 800
+  letter-spacing: 0.2px;
 }
 
 .main-content h2 {
@@ -440,14 +455,14 @@ footer a {
 .main-content h3 {
   font-size: clamp(1.1rem, 2.2vw, 2.5rem);
   margin: 20px 0 10px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 0.2px;
 }
 
 .main-content p {
   font-size: clamp(0.9rem, 1.5vw, 1.2rem);
   margin: 0;
 }
-
 
 .spacer-20 {
   height: 20px;
@@ -460,13 +475,14 @@ footer a {
 .main-button {
   display: inline-block;
   margin-top: 20px;
-  padding: 0.9em 2em;
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  padding: 0.9em 2.5em;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 800;
   background-color: #ADFF2F;
   color: black;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -476,11 +492,12 @@ footer a {
 
 .scroll-down-arrow {
     position: absolute;
-    bottom: 70px;
+    bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100000;
+    z-index: 10;
     color: white;
+    cursor:pointer;
     animation: bounce 1s infinite;
 }
 
