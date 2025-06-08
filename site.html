@@ -47,8 +47,45 @@
             <li><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
+    <button class="burger" id="burger">&#9776;</button>
+    <button class="close-btn" id="close">
+    <img src="photo/close.svg" alt="Закрыть">
+    </button>
 
 </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+        <img class="mobile-logo" src="photo/logo.png" alt="Логотип">
+        <button class="close-btn" id="close">
+        <img src="photo/close.svg" alt="Закрыть">
+        </button>
+    </div>
+
+  <div class="mobile-content">
+    <ul class="mobile-nav">
+      <li class="dropdown">
+        <a href="#">О программе <span class="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="#">Особенности</a>
+          <a href="#">Базовая ИТ-подготовка</a>
+          <a href="#">Гибкая траектория</a>
+          <a href="#">Чему научим</a>
+          <a href="#">Кем и где работать</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Об университете <span class="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="#">История</a>
+          <a href="#">Структура</a>
+        </div>
+      </li>
+      <li><a href="#">Как поступить</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </div>
+</div>
 
 <main> 
 
@@ -66,7 +103,7 @@
             <div class="spacer-40"></div>
             <a href="#contact" class="main-button">Стань абитуриентом уже сейчас!</a>
             </div>
-                <a class="scroll-down-arrow">
+                <a class="scroll-down-arrow" href="#">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" class="feather feather-chevron-down">
@@ -99,6 +136,30 @@
     </div>
 
 </footer>
+    
+    <!-- Krestik-burger -->
+    <script>
+      const burger = document.getElementById('burger');
+      const close = document.getElementById('close');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.toggle('open');
+
+        if (isOpen) {
+          burger.classList.add('hide');
+          close.classList.add('show');
+        } else {
+          burger.classList.remove('hide');
+          close.classList.remove('show');
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        burger.addEventListener('click', toggleMenu);
+        close.addEventListener('click', toggleMenu);
+      });
+    </script>
 
 </body>
 </html>
