@@ -330,6 +330,45 @@
         </div>
     </section>
 
+    <section id="ouruinv" class="about-university-section">
+        <div class="container about-container">
+            <img src="photo/logo2.svg" alt="Логотип" class="about-logo">
+
+            <h2 class="about-title">
+                Российский государственный университет<br>
+                им. А.Н. Косыгина (Технологии. Дизайн. Искусство)
+            </h2>
+
+            <p class="about-subtitle">
+                Более 100 лет раскрываем и развиваем таланты в сферах технологий, дизайна и искусства за счет опережающей подготовки ответственных и мотивированных профессионалов.
+            </p>
+
+            <div class="about-stats">
+              <a href="https://rguk.ru/" target="_blank" class="stat-link">
+                <div class="stat-block">
+                  <div class="stat-number-bg">1</div>
+                  <div class="stat-title">Крупный университет</div>
+                  <p class="stat-description">РГУ им. А. Н. Косыгина был основан в 1920 году и имеет богатую историю и традиции. Более 10000 студентов получают здесь высшее образование в 10 Институтах.</p>
+                </div>
+              </a>
+              <a href="https://yandex.ru/maps/org/rgu_im_a_n_kosygina_tekhnologii_dizayna_i_iskusstvo/52355285010/?ll=37.601495%2C55.720467&z=14" target="_blank" class="stat-link">
+                <div class="stat-block">
+                  <div class="stat-number-bg">2</div>
+                  <div class="stat-title">Удобное расположение</div>
+                  <p class="stat-description">В центре Москвы, рядом с метро Шаболовская. Несколько корпусов общежитий, в шаговой доступности от учебных корпусов.</p>
+                </div>
+              </a>
+              <a href="https://islod.obrnadzor.gov.ru/accredreestr/details/0b0f100f-0d0d-1312-0b11-0b0f1011120b/1/" target="_blank" class="stat-link">
+                <div class="stat-block">
+                  <div class="stat-number-bg">3</div>
+                  <div class="stat-title">Государственная аккредитация</div>
+                  <p class="stat-description">Выдача дипломов государственного образца и предоставление отсрочки от армии, что подтверждается Свидетельством о государственной аккредитации на сайте Рособрнадзора.</p>
+                </div>
+              </a>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer>
@@ -375,6 +414,22 @@
       document.addEventListener('DOMContentLoaded', () => {
         burger.addEventListener('click', toggleMenu);
         close.addEventListener('click', toggleMenu);
+      });
+    </script>
+
+    <!-- animka-poyavleniya -->
+    <script>
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // только один раз
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.stat-block').forEach(block => {
+        observer.observe(block);
       });
     </script>
 
