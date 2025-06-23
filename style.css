@@ -685,6 +685,41 @@ footer a:hover {
     padding: 0 20px; 
 }
 
+.text-section .feature-item:nth-child(1).animate {
+    animation-delay: 0.2s;
+}
+.text-section .feature-item:nth-child(2).animate {
+    animation-delay: 0.4s;
+}
+.text-section .feature-item:nth-child(3).animate {
+    animation-delay: 0.6s;
+}
+.text-section .feature-item:nth-child(4).animate {
+    animation-delay: 0.8s;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature-item.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
 /*4th SECTION*/
 .flexible-path-section {
     background-color: white;       
@@ -772,8 +807,13 @@ footer a:hover {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.6s ease-out forwards;
+    animation-play-state: paused;
     text-align: left;
     max-width: 350px;
+}
+
+.it-area.animated {
+    animation-play-state: running;
 }
 
 .it-area-heading {
@@ -841,6 +881,11 @@ footer a:hover {
     opacity: 0;
     animation: fadeInUp 0.6s ease-out forwards;
     transition: all 0.3s ease; 
+    animation-play-state: paused;
+}
+
+.profession-card.animated {
+  animation-play-state: running;
 }
 
 .profession-card:hover {
@@ -875,14 +920,14 @@ footer a:hover {
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*7th SECTION*/
@@ -1194,11 +1239,43 @@ footer a:hover {
 .itict-button:hover {
     background-color: #8fdd00;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-block {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature-block.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
 @media (max-width: 768px) {
     .itict-features {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.itict-info-section .feature-block:nth-child(1).animate {
+    animation-delay: 0.2s;
+}
+.itict-info-section .feature-block:nth-child(2).animate {
+    animation-delay: 0.4s;
+}
+.itict-info-section .feature-block:nth-child(3).animate {
+    animation-delay: 0.6s;
 }
 
 /*10th section*/
@@ -1255,6 +1332,47 @@ footer a:hover {
     line-height: 1.5;
     color: #444;
 }
+
+.student-support-section .support-item:nth-child(1).animate {
+    animation-delay: 0.2s;
+}
+.student-support-section .support-item:nth-child(2).animate {
+    animation-delay: 0.4s;
+}
+.student-support-section .support-item:nth-child(3).animate {
+    animation-delay: 0.6s;
+}
+.student-support-section .support-item:nth-child(4).animate {
+    animation-delay: 0.8s;
+}
+.student-support-section .support-item:nth-child(5).animate {
+    animation-delay: 1s;
+}
+.student-support-section .support-item:nth-child(6).animate {
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.support-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.support-item.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
 /*11 SECTION*/
 .student-life-section {
     background: black;
@@ -1539,6 +1657,38 @@ footer a:hover {
   color: #ccc;
   line-height: 1.6;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.teacher-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.teacher-item.animate {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.teachers-section .teacher-item:nth-child(1).animate {
+  animation-delay: 0.2s;
+}
+.teachers-section .teacher-item:nth-child(2).animate {
+  animation-delay: 0.4s;
+}
+.teachers-section .teacher-item:nth-child(3).animate {
+  animation-delay: 0.6s;
+}
+
 @media (max-width: 768px) {
     .student-life-layout {
         flex-wrap: wrap;
@@ -1802,6 +1952,34 @@ footer a:hover {
   font-size: 1.1em;
   margin-top: 5px;
 }
+.credit-section .animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: none;
+}
+.credit-section .animated {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.credit-section .delay-1.animated { animation-delay: 0.2s; }
+.credit-section .delay-2.animated { animation-delay: 0.4s; }
+.credit-section .delay-3.animated { animation-delay: 0.6s; }
+.credit-section .delay-4.animated { animation-delay: 0.8s; }
+.credit-section .delay-5.animated { animation-delay: 1s; }
+.credit-section .delay-6.animated { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*17 SECTION*/
 .olympiad-section {
   background: #fff;
   color: #000;
@@ -1814,7 +1992,6 @@ footer a:hover {
   font-size: 1.5em;
   margin-bottom: 30px;
 }
-/*17 SECTION*/
 .qr-image {
   width: 200px;
   max-width: 100%;

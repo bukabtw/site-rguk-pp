@@ -374,7 +374,7 @@
             </div>
         </div>
     </section>
-<section id="itict" class="itict-info-section">
+    <section id="itict" class="itict-info-section">
         <div class="container itict-container">
             <img src="photo/logo_ITICT.svg" alt="Логотип ИИТиЦТ" class="itict-logo">
 
@@ -877,88 +877,88 @@
       });
     </script>
     <script>
-const images = [
-    "photo/1.jpg", "photo/2.jpg", "photo/3.jpg", "photo/4.jpg",
-    "photo/5.jpg", "photo/6.jpg", "photo/7.jpg", "photo/8.jpg"
-];
-let current = 0;
-let interval;
+    const images = [
+        "photo/1.jpg", "photo/2.jpg", "photo/3.jpg", "photo/4.jpg",
+        "photo/5.jpg", "photo/6.jpg", "photo/7.jpg", "photo/8.jpg"
+    ];
+    let current = 0;
+    let interval;
 
-const mainImg = document.getElementById('main-slider-image');
-const thumbs = document.querySelectorAll('#slider-thumbs img');
-const prev = document.getElementById('prev-arrow');
-const next = document.getElementById('next-arrow');
+    const mainImg = document.getElementById('main-slider-image');
+    const thumbs = document.querySelectorAll('#slider-thumbs img');
+    const prev = document.getElementById('prev-arrow');
+    const next = document.getElementById('next-arrow');
 
-function showImage(index) {
-    current = index;
-    mainImg.style.opacity = 0;
-    setTimeout(() => {
-        mainImg.src = images[index];
-        mainImg.style.opacity = 1;
-        thumbs.forEach(t => t.classList.remove('active-thumb'));
-        thumbs[index].classList.add('active-thumb');
-    }, 300);
-}
+    function showImage(index) {
+        current = index;
+        mainImg.style.opacity = 0;
+        setTimeout(() => {
+            mainImg.src = images[index];
+            mainImg.style.opacity = 1;
+            thumbs.forEach(t => t.classList.remove('active-thumb'));
+            thumbs[index].classList.add('active-thumb');
+        }, 300);
+    }
 
-function nextImage() {
-    current = (current + 1) % images.length;
-    showImage(current);
-}
+    function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+    }
 
-function prevImage() {
-    current = (current - 1 + images.length) % images.length;
-    showImage(current);
-}
+    function prevImage() {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+    }
 
-thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('click', () => {
-        clearInterval(interval);
-        showImage(i);
-        interval = setInterval(nextImage, 3000);
+    thumbs.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => {
+            clearInterval(interval);
+            showImage(i);
+            interval = setInterval(nextImage, 3000);
+        });
     });
-});
 
-prev.onclick = () => {
-    clearInterval(interval);
-    prevImage();
+    prev.onclick = () => {
+        clearInterval(interval);
+        prevImage();
+        interval = setInterval(nextImage, 3000);
+    };
+
+    next.onclick = () => {
+        clearInterval(interval);
+        nextImage();
+        interval = setInterval(nextImage, 3000);
+    };
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalClose = document.getElementById('modal-close');
+    const modalNext = document.getElementById('modal-next');
+    const modalPrev = document.getElementById('modal-prev');
+
+    mainImg.onclick = () => {
+        modal.style.display = 'flex';
+        modalImg.src = images[current];
+    };
+
+    modalClose.onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    modalNext.onclick = () => {
+        current = (current + 1) % images.length;
+        modalImg.src = images[current];
+        showImage(current);
+    };
+
+    modalPrev.onclick = () => {
+        current = (current - 1 + images.length) % images.length;
+        modalImg.src = images[current];
+        showImage(current);
+    };
+
+    showImage(0);
     interval = setInterval(nextImage, 3000);
-};
-
-next.onclick = () => {
-    clearInterval(interval);
-    nextImage();
-    interval = setInterval(nextImage, 3000);
-};
-
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalClose = document.getElementById('modal-close');
-const modalNext = document.getElementById('modal-next');
-const modalPrev = document.getElementById('modal-prev');
-
-mainImg.onclick = () => {
-    modal.style.display = 'flex';
-    modalImg.src = images[current];
-};
-
-modalClose.onclick = () => {
-    modal.style.display = 'none';
-};
-
-modalNext.onclick = () => {
-    current = (current + 1) % images.length;
-    modalImg.src = images[current];
-    showImage(current);
-};
-
-modalPrev.onclick = () => {
-    current = (current - 1 + images.length) % images.length;
-    modalImg.src = images[current];
-    showImage(current);
-};
-
-showImage(0);
-interval = setInterval(nextImage, 3000);
 </script>
 <script>
   const animatedCards = document.querySelectorAll('.animate');
@@ -1095,6 +1095,33 @@ interval = setInterval(nextImage, 3000);
         });
     });
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function observeElements(selector, addClass = 'animate', threshold = 0.1) {
+        const elements = document.querySelectorAll(selector);
+        if (!elements.length) return;
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(addClass);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold });
+
+        elements.forEach(el => observer.observe(el));
+      }
+      observeElements('.feature-item');
+      observeElements('.itict-info-section .feature-block');
+      observeElements('.student-support-section .support-item');
+      observeElements('.teachers-section .teacher-item');
+      observeElements('.credit-section .animate', 'animated');
+      observeElements('.it-area', 'animated');
+      observeElements('.it-area, .profession-card', 'animated');
+    });
+</script>
+
 
 </body>
 </html>
