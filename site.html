@@ -2,51 +2,815 @@
 <html lang="ru">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Информационные технологии и дизайн</title>
-        <link rel="stylesheet" href="style.css">
+    <title>Информационные технологии и дизайн</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="photo/logosait.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
+
     <div class="logo">
         <a href="https://rguk.ru/" target="_blank">
-        <img src="photo/logo.png" alt="Логотип">
+        <img src="photo/logo.svg" alt="Логотип">
         </a>
     </div>
     <nav>
         <ul>
             <li class="dropdown">
-                <a href="#">О программе <span class="arrow">&#9660;</span></a>
+                <a href="#">
+                    <strong>О программе</strong>
+                    <span class="arrow">&#9660;</span>
+                </a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Особенности</a></li>
-                    <li><a href="#">Базовая ИТ-подготовка</a></li>
-                    <li><a href="#">Гибкая образовательная траектория</a></li>
-                    <li><a href="#">Чему научим</a></li>
-                    <li><a href="#">Кем и где работать после</a></li>
+                    <li><a href="#second">Особенности</a></li>
+                    <li><a href="#basedit">Базовая ИТ-подготовка</a></li>
+                    <li><a href="#pathselection">Гибкая образовательная траектория</a></li>
+                    <li><a href="#areas">Чему научим</a></li>
+                    <li><a href="#professions">Кем и где работать после</a></li>
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Об университете <span class="arrow">&#9660;</span></a>
+                <a href="#">
+                    <strong>Об университете</strong>
+                    <span class="arrow">&#9660;</span>
+                </a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Наш университет</a></li>
-                    <li><a href="#">ИИТиЦТ</a></li>
-                    <li><a href="#">Поддержка студентов</a></li>
-                    <li><a href="#">Студенческая жизнь</a></li>
-                    <li><a href="#">Наши студенты</a></li>
-                    <li><a href="#">Преподаватели</a></li>
-                    <li><a href="#">Инфраструктура</a></li>
+                    <li><a href="#ouruinv">Наш университет</a></li>
+                    <li><a href="#itict">ИИТиЦТ</a></li>
+                    <li><a href="#stusupp">Поддержка студентов</a></li>
+                    <li><a href="#studlife">Студенческая жизнь</a></li>
+                    <li><a href="#ourstuds">Наши студенты</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#infr">Инфраструктура</a></li>
                 </ul>
             </li>
-            <li><a href="#">Как поступить</a></li>
-            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#admission"><strong>Как поступить</strong></a></li>
+            <li><a href="#contacts"><strong>Контакты</strong></a></li>
         </ul>
     </nav>
+    <button class="burger" id="burger">&#9776;</button>
+    <button class="close-btn" id="close">
+    <img src="photo/close.svg" alt="Закрыть">
+    </button>
+
 </header>
 
-<main>  
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+        <img class="mobile-logo" src="photo/logo.svg" alt="Логотип">
+        <button class="close-btn" id="close">
+        <img src="photo/close.svg" alt="Закрыть">
+        </button>
+    </div>
+
+  <div class="mobile-content">
+    <ul class="mobile-nav">
+      <li class="dropdown">
+        <a href="#">О программе <span class="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="#second">Особенности</a>
+          <a href="#basedit">Базовая ИТ-подготовка</a>
+          <a href="#pathselection">Гибкая траектория</a>
+          <a href="#areas">Чему научим</a>
+          <a href="#professions">Кем и где работать</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Об университете <span class="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="#ouruinv">Наш университет</a>  
+          <a href="#itict">ИИТиЦТ</a>
+          <a href="#stusupp">Поддержка студентов</a>
+          <a href="#studlife">Студенческая жизнь</a>  
+          <a href="#ourstuds">Наши студенты</a>
+          <a href="#teachers">Преподаватели</a>
+          <a href="#infr">Инфраструктура</a>
+        </div>
+      </li>
+      <li><a href="#admission">Как поступить</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </div>
+</div>
+
+<main> 
+
+    <section class="main-section">
+        <div class="main-container">
+            <div class="main-content">
+            <h1>Институт информационных технологий и цифровой трансформации</h1>
+            <h2>РГУ им. А.Н. Косыгина</h2>
+            <div class="spacer-40"></div>
+            <h3>ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ И ДИЗАЙН</h3>
+            <p>Программа бакалавриата 09.03.02. Информационные системы и технологии</p>
+            <div class="spacer-20"></div>
+            <h3>ПРОГРАММИРОВАНИЕ И ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</h3>
+            <p>Программа бакалавриата 01.03.02. Прикладная математика и информатика</p>
+            <div class="spacer-40"></div>
+            <a href="#contact" class="main-button">Стань абитуриентом уже сейчас!</a>
+           <a class="scroll-down-arrow" href="#second" id="scrollArrow" aria-label="Прокрутить к секции">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                   stroke-linejoin="round" class="feather feather-chevron-down">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="second" class = "text-section full-width">
+        <div class="container">
+            <h2 class="main-heading">
+                    <span class="bold-title">4 важных особенности образовательной программы</span>
+            </h2>
+            <div class="feature-row">
+
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <span class="feature-title">Базовая и гибкая часть программы</span>
+                        <p class="feature-description">Программа состоит из двух частей:</p>
+                        <ul class="feature-list">
+                            <li>единой для всех студентов (базовой) части, которая готовит универсального ИТ-специалиста широкого профиля;</li>
+                            <li>гибкой части, изучение которой дает возможность работать по конкретным, часто встречающимся на сайтах, вакансиям и востребованным ИТ-профессиям.</li>
+                        </ul>
+                        <span class="feature-number">1</span>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <span class="feature-title">Практика и проекты</span>
+                        <p class="feature-description">Большую роль в программе отводится не только обучению выполнять готовое техническое задание, но и формировать и «упаковывать» собственные идеи в проекты и даже стартапы. Для этого предусмотрена широкая программа взаимодействия с успешными ИТ-компаниями и стартапами в формате практик, хакатонов, мастер-классов и т. д.</p>
+                        <span class="feature-number">2</span>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <span class="feature-title">Возможность исправления выбора</span>
+                        <p class="feature-description">Окончательный выбор состава гибкой части происходит только в конце второго курса. К этому времени уже довольно точно определяются профессиональные интересы и потребности наших студентов.</p>
+                        <span class="feature-number">3</span>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <span class="feature-title">Быстрый вход в сферу ИТ</span>
+                        <p class="feature-description">Изучение ИТ-дисциплин на каждом семестре обучения, начиная уже с 1-ого месяца, играет решающую роль в формировании компетенций студентов.</p>
+                        <span class="feature-number">4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id ="basedit" class="image-section">
+        <div class="container">
+            <h2 class="image-section-title">Базовая ИТ-подготовка</h2>
+            <img class="image-section-image" src="photo/image.jpg" alt="Схема">
+        </div>
+    </section>
+
+    <section id ="pathselection" class="flexible-path-section">
+        <div class="container">
+            <h2 class="flexible-path-title">Гибкая образовательная траектория</h2>
+            <p class="flexible-path-description">В ходе обучения студенты сами определяют направления ИТ-индустрии, которые подходят для изучения именно им.</p>
+
+            <div class="flexible-path-content">
+                <img class="flexible-path-image" src="photo/krug.jpg" alt="Круг">
+                <div class="flexible-path-text">
+                    <p>Из набора 9 востребованных профессий огромной ИТ-индустрии студенты выбирают 3 профессиональных модуля, расставляя приоритеты для каждой профессии.</p>
+                    <p>Два профессиональных модуля выбираются на 1-м курсе, третий — на втором. Если кто-то не смог попасть на интересный для него профессиональный модуль с первого раза, то есть еще одна попытка.</p>
+                    <p>Суммарно профессиональные модули занимают более трети всей образовательной программы. Остальное — обязательная для высококлассных ИТ-специалистов базовая часть.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="areas" class="it-areas-section">
+        <div class="container">
+            <h2 class="it-areas-title">В каких областях ИТ можно прокачаться</h2>
+            <p class="it-areas-subtitle">Выберите 3 профессиональных модуля и создайте свою профессию</p>
+            <div class="it-areas-grid">
+                <div class="it-area" style="animation-delay: 0.1s;">
+                    <h3 class="it-area-heading">Компьютерная графика и иммерсивные технологии</h3>
+                    <p class="it-area-description">Технические среды компьютерного дизайна, методы обработки 2D- и 3D-графики. Обучение может проходить на базовом или углубленном уровне (длительность изучения удваивается).</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.2s;">
+                    <h3 class="it-area-heading">Искусственный интеллект</h3>
+                    <p class="it-area-description">Использование, проектирование и программирование систем с искусственным интеллектом. В углубленном варианте изучается разработка нейронных сетей.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.3s;">
+                    <h3 class="it-area-heading">Распределенные системы</h3>
+                    <p class="it-area-description">Комплексная подготовка специалистов в DevOps и программировании распределенных и нагруженных систем. Может изучаться на базовом или углубленном уровне.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.4s;">
+                    <h3 class="it-area-heading">Системный анализ</h3>
+                    <p class="it-area-description">Методы выявления требований к новым программным и цифровым продуктам, реинжиниринг бизнес-процессов, проектирование информационных систем.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.5s;">
+                    <h3 class="it-area-heading">Базы данных</h3>
+                    <p class="it-area-description">Профессиональная организация и администрирование баз данных. В углубленном варианте осуществляется подготовка аналитиков данных.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.6s;">
+                    <h3 class="it-area-heading">Веб-технологии</h3>
+                    <p class="it-area-description">Дизайн и фуллстек-разработка интернет-сайтов и порталов. Может изучаться на базовом или углубленном уровне.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.7s;">
+                    <h3 class="it-area-heading">САПР</h3>
+                    <p class="it-area-description">Использование и программирование систем автоматизированного проектирования.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.8s;">
+                    <h3 class="it-area-heading">Кроссплатформенная разработка</h3>
+                    <p class="it-area-description">Разработка прикладного программного обеспечения для разных платформ, в том числе и мобильных.</p>
+                </div>
+                <div class="it-area" style="animation-delay: 0.9s;">
+                    <h3 class="it-area-heading">ERP-системы</h3>
+                    <p class="it-area-description">Проектирование, разработка и внедрение систем управления ресурсами организаций и производством.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="professions" class="professions-section">
+        <div class="container">
+        <h2 class="professions-title">Кем можно работать после обучения</h2>
+        <p class="professions-subtitle">Каждый профессиональный модуль – востребованная ИТ-профессия</p>
+
+            <div class="professions-grid">
+              <a href="https://hh.ru/search/vacancy?area=1&experience=between1And3&no_magic=true&only_with_salary=true&ored_clusters=true&text=%D0%98%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80+%D0%BF%D0%BE+%D0%A1%D0%90%D0%9F%D0%A0" class="profession-card" style="animation-delay: 0.1s;">
+                <h3 class="profession-name">Инженер по САПР</h3>
+                <p class="profession-description">Определяет требования к системам автоматического проектирования с учетом особенностей производства, дорабатывает, формирует программу внедрения и цифровой трансформации организаций.</p>
+                <div class="profession-salary">100 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=Ux%2Fui+%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5%D1%80&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.2s;">
+                <h3 class="profession-name">UX/UI дизайнер и Frontend разработчик</h3>
+                <p class="profession-description">Собирает функциональные требования от пользователей цифровых продуктов и полностью проектирует интерфейс. Разрабатывает клиентскую часть веб-сайтов на языке HTML/CSS, программирует на JavaScript, использует современные фреймворки.</p>
+                <div class="profession-salary">200 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=3d+%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.3s;">
+                <h3 class="profession-name">3D-моделлер</h3>
+                <p class="profession-description">Создает виртуальные копии объектов реального мира. Отлично владеет различными методиками разработки моделей, их анимации, создания реалистичности. Применяет технологии AR/VR. Иногда проектирует игры.</p>
+                <div class="profession-salary">150 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=%D0%92%D0%B5%D0%B1+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.4s;">
+                <h3 class="profession-name">Веб-разработчик</h3>
+                <p class="profession-description">Программирует серверную часть веб-приложений, но может и сверстать клиентскую часть. Хорошо знает языки веб-разработки, использует фреймворки, может сам настроить веб-сервер.</p>
+                <div class="profession-salary">250 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=1%D1%81+%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.5s;">
+                <h3 class="profession-name">1C-программист</h3>
+                <p class="profession-description">Проектирует и разрабатывает системы учета и управления различными организациями и предприятиями. Использует самую распространенную и востребованную платформу разработки в РФ.</p>
+                <div class="profession-salary">220 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.6s;">
+                <h3 class="profession-name">Аналитик данных</h3>
+                <p class="profession-description">Собирает цифровые данные из разных источников, определяет метрики, которые могут помочь в выработке управленческих решений. Разрабатывает программы для обработки данных.</p>
+                <div class="profession-salary">200 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=ai+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.7s;">
+                <h3 class="profession-name">Разработчик ИИ</h3>
+                <p class="profession-description">Использует готовые библиотеки и сервисы для внедрения элементов искусственного интеллекта в различные системы. Опытные разработчики хорошо знают математику и проектируют нейросети самостоятельно.</p>
+                <div class="profession-salary">200 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA+%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D1%85+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.8s;">
+                <h3 class="profession-name">Разработчик мобильных приложений</h3>
+                <p class="profession-description">Проектирует интерфейс, рисует его, программирует мобильную часть, связывает мобильные приложения с серверами и базами данных.</p>
+                <div class="profession-salary">150 000 ₽ →</div>
+              </a>
+
+              <a href="https://hh.ru/search/vacancy?text=%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80+%D0%B1%D0%B4&salary=&ored_clusters=true&experience=between1And3&only_with_salary=true&area=1&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line" class="profession-card" style="animation-delay: 0.9s;">
+                <h3 class="profession-name">Администратор баз данных</h3>
+                <p class="profession-description">Оптимизирует структуру баз данных для их сохранности. Внедряет методы повышения скорости доступа к данным и их обработки. Администрирует сервера баз данных, но многое знает и в операционных системах.</p>
+                <div class="profession-salary">220 000 ₽ →</div>
+              </a>
+            </div>
+        <p class="salary-disclaimer">*Указана ориентировочная заработная плата специалиста с опытом работы от 1 года по вакансиям сайта hh.ru</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form-section">
+        <img src="photo/priemka.jpg" alt="Фон" class="form-priemka-image">
+        <div class="container form-container">
+            <div class="form-text">
+                <h2 class="form-heading">Не стойте в очереди во время приемной кампании!</h2>
+                <p class="form-subheading">
+                    Оставьте свои контакты — мы свяжемся с вами, проконсультируем, вышлем дополнительные материалы и вместе начнем подготовку документов для поступления!
+                </p>
+                <form class="contact-form">
+                    <div class="form-fields">
+                        <div class="form-field">
+                            <label for="name">Ваше ФИО</label>
+                            <input type="text" id="name" placeholder="ФИО">
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Ваш телефон</label>
+                            <input type="tel" id="phone" placeholder="+7 (999) 999 99-99">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Ваш email</label>
+                            <input type="email" id="email" placeholder="example@yandex.ru">
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit-button">Отправить</button>
+                </form>
+                <p class="form-note">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ouruinv" class="about-university-section">
+        <div class="container about-container">
+            <img src="photo/logo2.svg" alt="Логотип" class="about-logo">
+
+            <h2 class="about-title">
+                Российский государственный университет<br>
+                им. А.Н. Косыгина (Технологии. Дизайн. Искусство)
+            </h2>
+
+            <p class="about-subtitle">
+                Более 100 лет раскрываем и развиваем таланты в сферах технологий, дизайна и искусства за счет опережающей подготовки ответственных и мотивированных профессионалов.
+            </p>
+
+            <div class="about-stats">
+              <a href="https://rguk.ru/" target="_blank" class="stat-link">
+                <div class="stat-block">
+                  <div class="stat-number-bg">1</div>
+                  <div class="stat-title">Крупный университет</div>
+                  <p class="stat-description">РГУ им. А. Н. Косыгина был основан в 1920 году и имеет богатую историю и традиции. Более 10000 студентов получают здесь высшее образование в 10 Институтах.</p>
+                </div>
+              </a>
+              <a href="https://yandex.ru/maps/org/rgu_im_a_n_kosygina_tekhnologii_dizayna_i_iskusstvo/52355285010/?ll=37.601495%2C55.720467&z=14" target="_blank" class="stat-link">
+                <div class="stat-block">
+                  <div class="stat-number-bg">2</div>
+                  <div class="stat-title">Удобное расположение</div>
+                  <p class="stat-description">В центре Москвы, рядом с метро Шаболовская. Несколько корпусов общежитий, в шаговой доступности от учебных корпусов.</p>
+                </div>
+              </a>
+              <a href="https://islod.obrnadzor.gov.ru/accredreestr/details/0b0f100f-0d0d-1312-0b11-0b0f1011120b/1/" target="_blank" class="stat-link">
+                <div class="stat-block">
+                  <div class="stat-number-bg">3</div>
+                  <div class="stat-title">Государственная аккредитация</div>
+                  <p class="stat-description">Выдача дипломов государственного образца и предоставление отсрочки от армии, что подтверждается Свидетельством о государственной аккредитации на сайте Рособрнадзора.</p>
+                </div>
+              </a>
+            </div>
+        </div>
+    </section>
+    <section id="itict" class="itict-info-section">
+        <div class="container itict-container">
+            <img src="photo/logo_ITICT.svg" alt="Логотип ИИТиЦТ" class="itict-logo">
+
+            <h2 class="itict-title">
+                Институт информационных технологий<br>
+                и цифровой трансформации
+            </h2>
+
+            <div class="itict-features">
+                <div class="feature-block">
+                    <div class="feature-number-bg">1</div>
+                    <h3>Перспективные направления</h3>
+                    <p>Студенты сами формируют свою программу обучения, выбирая 3 профессиональных модуля из предлагаемого набора востребованных в ИТ направлений.</p>
+                </div>
+                <div class="feature-block">
+                    <div class="feature-number-bg">2</div>
+                    <h3>Высокое качество образования</h3>
+                    <p>В формировании программы обучения принимают участие более 50 высококвалифицированных преподавателей и 20 активных компаний-партнёров, определяющих требования к современным специалистам ИТ-индустрии.</p>
+                </div>
+                <div class="feature-block">
+                    <div class="feature-number-bg">3</div>
+                    <h3>Практическая подготовка</h3>
+                    <p>Студенты не только изучают теорию, но и участвуют в реальных проектах, что помогает им получить ценный опыт и навыки.</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="itict-button">Я хочу стать востребованным ИТ-специалистом!</a>
+        </div>
+    </section>
+    <section id = "stusupp" class="student-support-section">
+        <div class="container support-container">
+            <h2 class="support-heading">Поддержка студентов</h2>
+            <p class="support-subheading">В РГУ им. А.Н. Косыгина действуют различные меры поддержки студентов.</p>
+
+            <div class="support-grid">
+                <div class="support-item">
+                    <div class="support-number">1</div>
+                    <div class="support-content">
+                        <h3>Академическая стипендия</h3>
+                        <p>Выплачивается студентам первого семестра, а также всем студентам, завершивших очередной семестр без троек. Размер стипендии напрямую зависит от результатов сессии.</p>
+                    </div>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-number">2</div>
+                    <div class="support-content">
+                        <h3>Повышенная академическая стипендия</h3>
+                        <p>Выплачиваются студентам, показывающим выдающиеся результаты в науке, спорте или социальной деятельности.</p>
+                    </div>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-number">3</div>
+                    <div class="support-content">
+                        <h3>Именные стипендии</h3>
+                        <p>Выплачиваются лучшим студентам-отличникам по особым распоряжениям руководства университета.</p>
+                    </div>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-number">4</div>
+                    <div class="support-content">
+                        <h3>Социальная стипендия</h3>
+                        <p>Выплачивается студентам, нуждающимся в средствах по установленным законом РФ социальным причинам.</p>
+                    </div>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-number">5</div>
+                    <div class="support-content">
+                        <h3>Материальная помощь</h3>
+                        <p>Выплачивается студентам, попавшим в трудные жизненные ситуации, для срочной покупки лекарств и других предметов первой необходимости, проезда домой по срочным неотложным обстоятельствам.</p>
+                    </div>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-number">6</div>
+                    <div class="support-content">
+                        <h3>Общежитие</h3>
+                        <p>Проживание предоставляется студентам, адрес регистрации которых находится более 85 км от Москвы. В настоящий момент для поступающих в институт на первый курс выделяется более 65 мест.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="studlife" class="student-life-section">
+        <div class="container">
+            <h2 class="student-life-heading">Студенческая жизнь</h2>
+            <div class="student-life-layout">
+                <div class="slider-wrapper">
+                    <div class="slider-image-container">
+                        <img id="main-slider-image" src="photo/1.jpg" alt="Фото" class="active">
+                        <div class="slider-arrow left" id="prev-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="slider-arrow right" id="next-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="slider-thumbnails" id="slider-thumbs">
+                        <img src="photo/1.jpg" data-index="0">
+                        <img src="photo/2.jpg" data-index="1">
+                        <img src="photo/3.jpg" data-index="2">
+                        <img src="photo/4.jpg" data-index="3">
+                        <img src="photo/5.jpg" data-index="4">
+                        <img src="photo/6.jpg" data-index="5">
+                        <img src="photo/7.jpg" data-index="6">
+                        <img src="photo/8.jpg" data-index="7">
+                    </div>
+                </div>
+
+                <div class="student-life-text">
+                    <p><strong>Институт — это не только учеба, но и целая эпоха в жизни каждого нашего студента.</strong></p>
+                    <p>Наш университет — место, где студенческая жизнь бьет ключом, наполняясь событиями, которые делают наше учебное заведение особенным местом для креатива, творчества и активности.</p>
+                    <p>В самом сердце студенческой атмосферы у нас постоянно кипят проекты — инициативы студентов, направленные на создание чего-то нового и удивительного. Здесь каждый может воплотить свои идеи, будь то научный проект, социальная инициатива или творческий подвиг.</p>
+                    <p>Масштабные мероприятия стали неотъемлемой частью нашей студенческой жизни. «Мисс и Мистер», «Таланты», «Тропа посвящения», «Студент года» и, конечно, «Селигер» — каждый найдёт себя.</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-nav left" id="modal-prev">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <img class="modal-content" id="modal-img">
+            <div class="modal-nav right" id="modal-next">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section id="ourstuds" class="students-section">
+      <div class="container">
+        <h2 class="students-heading">Наши студенты</h2>
+        <p class="students-subheading">Услышать всех наших студентов сложно (их много), но вот что говорят некоторые из них</p>
+
+        <div class="students-grid">
+          <div class="students-row">
+            <div class="student-card animate fade-in delay-1">
+              <img src="photo/maria.jpg" alt="Мария Амелина">
+              <div class="student-info">
+                <p>Здесь работают настоящие профессионалы своего дела! Они не только дают знания, но и передают свой опыт, и настаивают на дальнейшее развитие. Я еще ни разу не пожалела, что выбрала это направление!</p>
+                <h4>Мария Амелина</h4>
+                <span>3 курс</span>
+              </div>
+            </div>
+
+            <div class="student-card animate fade-in delay-2">
+              <img src="photo/egor.jpg" alt="Егор Филонов">
+              <div class="student-info">
+                <p>Университет превзошел все мои ожидания! Здесь я не только получаю образование в своей области, но и нахожу много единомышленников, благодаря многогранной студенческой жизни.</p>
+                <h4>Егор Филонов</h4>
+                <span>2 курс</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="students-row">
+            <div class="student-card animate fade-in delay-3">
+              <img src="photo/nadya.jpg" alt="Надя Масленникова">
+              <div class="student-info">
+                <p>Я в восторге от нашего направления и Университета! Программа настолько многогранна, что я могу одновременно изучать разные сферы IT и вдохновляться новыми достижениями.</p>
+                <h4>Надя Масленникова</h4>
+                <span>2 курс</span>
+              </div>
+            </div>
+
+            <div class="student-card animate fade-in delay-4">
+              <img src="photo/oleg.jpg" alt="Олег Морозихин">
+              <div class="student-info">
+                <p>Университет предоставляет безграничные возможности! Я рад, что выбрал это направление, и уверен, что в будущем я точно буду востребованным специалистом.</p>
+                <h4>Олег Морозихин</h4>
+                <span>2 курс</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="students-button-wrapper">
+          <a href="#contact" class="students-button">Присоединяйтесь к нам прямо сейчас!</a>
+        </div>
+      </div>
+    </section>
+    <section id="teachers" class="teachers-section">
+      <div class="container">
+        <h2 class="teachers-heading">Наши преподаватели</h2>
+        <p class="teachers-subheading">
+          В Институте информационных технологий и<br>
+          цифровой трансформации работает более 50<br>
+          преподавателей
+        </p>
+
+        <div class="teachers-list">
+          <div class="teacher-item">
+            <div class="teacher-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M5 13L9 17L19 7" stroke="#ADFF2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="teacher-text">
+              <h3>Кандидаты и доктора наук</h3>
+              <p>Высокое качество преподавания базовых и фундаментальных дисциплин подтверждается научными достижениями наших преподавателей. Фундамент из ИТ-компетенций — важный элемент дальнейшего успешного развития ИТ-специалиста с высшим образованием по любому направлению ИТ-сферы.</p>
+            </div>
+          </div>
+
+          <div class="teacher-item">
+            <div class="teacher-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M5 13L9 17L19 7" stroke="#ADFF2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="teacher-text">
+              <h3>Преподаватели-практики</h3>
+              <p>Совмещение преподавания и непосредственной работы наших преподавателей в ИТ-компаниях позволяет внедрять в наши дисциплины именно те знания и умения, которые нужны ИТ-специалистам прямо сейчас. Наши выпускники не услышат фразу «забудьте все, чему вас учили в ВУЗе»!</p>
+            </div>
+          </div>
+
+          <div class="teacher-item">
+            <div class="teacher-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M5 13L9 17L19 7" stroke="#ADFF2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="teacher-text">
+              <h3>Молодые специалисты</h3>
+              <p>Современные ИТ-технологии так быстро меняются, что успеть за ними проще всего именно молодым людям. Наши молодые преподаватели, совмещая учёбу в аспирантуре, работу над профессиональными ИТ-задачами и преподавание, привносят в программу самые современные ИТ-технологии.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="infr" class="infrastructure-section">
+      <div class="container">
+        <h2 class="infrastructure-heading">Учебная инфраструктура</h2>
+        <div class="infrastructure-layout">
+
+          <div class="slider-wrapper">
+            <div class="slider-image-container">
+              <img id="infra-slider-image" src="photo/9.jpg" alt="Фото">
+              <div class="slider-arrow left" id="infra-prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="slider-arrow right" id="infra-next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slider-thumbnails" id="infra-thumbs">
+              <img src="photo/9.jpg" data-index="0">
+              <img src="photo/10.jpg" data-index="1">
+              <img src="photo/11.jpg" data-index="2">
+              <img src="photo/12.jpg" data-index="3">
+              <img src="photo/13.jpg" data-index="4">
+              <img src="photo/14.jpg" data-index="5">
+              <img src="photo/15.jpg" data-index="6">
+              <img src="photo/16.jpg" data-index="7">
+              <img src="photo/17.jpg" data-index="8">
+              <img src="photo/18.jpg" data-index="9">
+            </div>
+          </div>
+
+          <div class="infrastructure-text">
+            <p><strong>Обучение проходит на одной площадке по адресу:<br>Москва, ул. Малая Калужская, д. 1</strong></p>
+            <p>В Университете создано мультимедийное учебное пространство, где студенты могут не только успешно учиться, но и пользоваться полным спектром удобств для самостоятельной работы.</p>
+            <p>В распоряжении студентов инновационные компьютерные классы, где студенты имеют доступ к передовым технологиям и программному обеспечению; библиотека с удобными читальными залами и электронными ресурсами; современный спортивный комплекс с тренажёрным залом и многое другое.</p>
+            <p>Инфраструктура нашего университета создана с учётом всех потребностей современного студента, обеспечивая комфортное и эффективное пребывание в учебном заведении.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal" id="infra-modal">
+        <span class="modal-close" id="infra-close">&times;</span>
+        <div class="modal-nav left" id="infra-modal-prev">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <img class="modal-content" id="infra-modal-img">
+        <div class="modal-nav right" id="infra-modal-next">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+    
+    <section id = "admission" class="admission-section">
+      <div class="container">
+        <h2 class="admission-heading animate fade-in delay-1">Как поступить</h2>
+
+        <div class="admission-step animate fade-in delay-2">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Сдать ЕГЭ или ВИ</h3>
+            <p>Если Вы заканчиваете 11-й класс школы, то для поступления необходимо сдать единый государственный экзамен по:</p>
+            <ul>
+              <li>Русскому языку;</li>
+              <li>Математике (профильный уровень);</li>
+              <li>Информатике или физике.</li>
+            </ul>
+            <p>Если Вы заканчиваете колледж, то для поступления Вам необходимо сдать вступительные испытания уже в нашем университете (очно или онлайн) в виде компьютерного тестирования по:</p>
+            <ul>
+              <li>Информатике и информационным технологиям;</li>
+              <li>Элементам математики;</li>
+              <li>Русскому языку.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="admission-step animate fade-in delay-3">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Подать заявление</h3>
+            <p>Через портал государственных услуг или иным способом подать заявление на поступление, указав направление подготовки:</p>
+            <ul>
+              <li><span class="highlight">09.03.02 Информационные системы и технологии, профиль «Информационные технологии и дизайн»</span></li>
+              <li><span class="highlight">01.03.02 Прикладная математика и информатика, профиль «Программирование и искусственный интеллект»</span></li>
+            </ul>
+            <p>Не откладывайте подачу заявления и формирование личного дела на потом — Вы можете упустить шанс поступить в желаемый ВУЗ!</p>
+            <p>Свяжитесь с нами прямо сейчас — мы Вас проконсультируем и несёмся начнём процесс сбора документов.</p>
+          </div>
+        </div>
+
+        <div class="admission-button-wrapper animate fade-in delay-4">
+          <a href="#contact" class="itict-button">Я хочу стать востребованным ИТ-специалистом!</a>
+        </div>
+      </div>
+    </section>
+    <section class="program-orient-section">
+      <div class="container">
+        <h2 class="orient-heading animate delay-1">На что ориентироваться?</h2>
+
+        <div class="orient-item animate delay-2">
+          <div class="orient-number">1</div>
+          <div class="orient-content">
+            <h3>ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ И ДИЗАЙН</h3>
+            <p><strong>09.03.02 Информационные системы и технологии</strong></p>
+            <p>Очная форма: <strong>70 бюджетных мест + 100 платных</strong></p>
+            <p>Очно-заочная (вечерняя) форма: <strong>25 бюджетных мест + 30 платных</strong></p>
+            <p>Заочная форма: <strong>18 бюджетных мест + 30 платных</strong></p>
+          </div>
+        </div>
+
+        <div class="orient-item animate delay-3">
+          <div class="orient-number">2</div>
+          <div class="orient-content">
+            <h3>ПРОГРАММИРОВАНИЕ<br>И ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</h3>
+            <p><strong>01.03.02 Прикладная математика и информатика</strong></p>
+            <p>Очная форма: <strong>30 платных мест</strong></p>
+          </div>
+        </div>
+
+        <div class="orient-item animate delay-4">
+          <div class="orient-number">3</div>
+          <div class="orient-content">
+            <h3>Проходной балл ЕГЭ в 2024 году</h3>
+            <p><strong>для бюджетных мест очной формы</strong></p>
+            <p><strong style="font-size: 1.5em;">237 баллов</strong></p>
+            <p style="color: #666;">без учёта дополнительных достижений</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="credit-section">
+      <div class="container">
+        <h2 class="credit-title animate delay-1">Образовательный кредит с господдержкой</h2>
+        <p class="credit-sub animate delay-1">
+          на примере 2024 года: ставка 3% годовых, остальную часть — 19,38% оплачивает государство
+        </p>
+
+        <div class="credit-step animate delay-2">
+          <div class="credit-number">1</div>
+          <div class="credit-text">
+            <p>
+              К примеру, в <strong>2024 году</strong> стоимость обучения по очной форме для программы
+              <strong>09.03.02 Информационные системы и технологии</strong>,
+              профиль <strong>«Информационные технологии и дизайн»</strong> без учета скидок составляла:
+            </p>
+            <p class="credit-highlight">160 000 руб. за семестр</p>
+          </div>
+        </div>
+
+        <div class="credit-step animate delay-3">
+          <div class="credit-number">2</div>
+          <div class="credit-text">
+            <p><strong>На первом курсе</strong></p>
+            <p class="credit-small">банк получает от Вас</p>
+            <p class="credit-highlight">320 руб. в месяц</p>
+          </div>
+        </div>
+
+        <div class="credit-step animate delay-4">
+          <div class="credit-number">3</div>
+          <div class="credit-text">
+            <p><strong>На втором курсе</strong></p>
+            <p class="credit-highlight">960 руб. в месяц</p>
+          </div>
+        </div>
+
+        <div class="credit-step animate delay-5">
+          <div class="credit-number">4</div>
+          <div class="credit-text">
+            <p><strong>На третьем, четвёртом курсе и 9 месяцев после завершения обучения</strong></p>
+            <p class="credit-highlight">2 800 руб. в месяц</p>
+          </div>
+        </div>
+
+        <div class="credit-step animate delay-6">
+          <div class="credit-number">5</div>
+          <div class="credit-text">
+            <p><strong>После обучения до выплаты кредита,<br>но не более 15 лет</strong></p>
+            <p class="credit-highlight">8 914 руб. в месяц</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="olympiad-section">
+      <div class="container">
+        <h2 class="olympiad-title">МЕЖРЕГИОНАЛЬНАЯ ОЛИМПИАДА<br>УНИВЕРСИТЕТА КОСЫГИНА</h2>
+
+        <a href="https://rguk.ru/applicant/olympiads/" target="_blank" class="olympiad-link">
+          <img src="photo/qr.png" alt="QR-код олимпиады" class="qr-image">
+          <p>https://rguk.ru/applicant/olympiads/</p>
+        </a>
+      </div>
+    </section>
 
 </main>
 
@@ -71,6 +835,292 @@
     </div>
 
 </footer>
+    
+    <!-- Krestik-burger -->
+    <script>
+      const burger = document.getElementById('burger');
+      const close = document.getElementById('close');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.toggle('open');
+
+        if (isOpen) {
+          burger.classList.add('hide');
+          close.classList.add('show');
+        } else {
+          burger.classList.remove('hide');
+          close.classList.remove('show');
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        burger.addEventListener('click', toggleMenu);
+        close.addEventListener('click', toggleMenu);
+      });
+    </script>
+
+    <!-- animka-poyavleniya -->
+    <script>
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // только один раз
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.stat-block').forEach(block => {
+        observer.observe(block);
+      });
+    </script>
+    <script>
+    const images = [
+        "photo/1.jpg", "photo/2.jpg", "photo/3.jpg", "photo/4.jpg",
+        "photo/5.jpg", "photo/6.jpg", "photo/7.jpg", "photo/8.jpg"
+    ];
+    let current = 0;
+    let interval;
+
+    const mainImg = document.getElementById('main-slider-image');
+    const thumbs = document.querySelectorAll('#slider-thumbs img');
+    const prev = document.getElementById('prev-arrow');
+    const next = document.getElementById('next-arrow');
+
+    function showImage(index) {
+        current = index;
+        mainImg.style.opacity = 0;
+        setTimeout(() => {
+            mainImg.src = images[index];
+            mainImg.style.opacity = 1;
+            thumbs.forEach(t => t.classList.remove('active-thumb'));
+            thumbs[index].classList.add('active-thumb');
+        }, 300);
+    }
+
+    function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+    }
+
+    function prevImage() {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+    }
+
+    thumbs.forEach((thumb, i) => {
+        thumb.addEventListener('click', () => {
+            clearInterval(interval);
+            showImage(i);
+            interval = setInterval(nextImage, 3000);
+        });
+    });
+
+    prev.onclick = () => {
+        clearInterval(interval);
+        prevImage();
+        interval = setInterval(nextImage, 3000);
+    };
+
+    next.onclick = () => {
+        clearInterval(interval);
+        nextImage();
+        interval = setInterval(nextImage, 3000);
+    };
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalClose = document.getElementById('modal-close');
+    const modalNext = document.getElementById('modal-next');
+    const modalPrev = document.getElementById('modal-prev');
+
+    mainImg.onclick = () => {
+        modal.style.display = 'flex';
+        modalImg.src = images[current];
+    };
+
+    modalClose.onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    modalNext.onclick = () => {
+        current = (current + 1) % images.length;
+        modalImg.src = images[current];
+        showImage(current);
+    };
+
+    modalPrev.onclick = () => {
+        current = (current - 1 + images.length) % images.length;
+        modalImg.src = images[current];
+        showImage(current);
+    };
+
+    showImage(0);
+    interval = setInterval(nextImage, 3000);
+</script>
+<script>
+  const animatedCards = document.querySelectorAll('.animate');
+
+  function revealOnScroll() {
+    animatedCards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        card.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+<script>
+  const infraImages = [
+    "photo/9.jpg", "photo/10.jpg", "photo/11.jpg", "photo/12.jpg",
+    "photo/13.jpg", "photo/14.jpg", "photo/15.jpg", "photo/16.jpg",
+    "photo/17.jpg", "photo/18.jpg"
+  ];
+
+  let infraCurrent = 0;
+  let infraInterval;
+
+  const infraMain = document.getElementById('infra-slider-image');
+  const infraThumbs = document.querySelectorAll('#infra-thumbs img');
+  const infraPrev = document.getElementById('infra-prev');
+  const infraNext = document.getElementById('infra-next');
+
+  function showInfra(index) {
+    infraCurrent = index;
+    infraMain.style.opacity = 0;
+    setTimeout(() => {
+      infraMain.src = infraImages[index];
+      infraMain.style.opacity = 1;
+      infraThumbs.forEach(t => t.classList.remove('active-thumb'));
+      if (infraThumbs[index]) infraThumbs[index].classList.add('active-thumb');
+    }, 300);
+  }
+
+  function nextInfra() {
+    showInfra((infraCurrent + 1) % infraImages.length);
+  }
+
+  function prevInfra() {
+    showInfra((infraCurrent - 1 + infraImages.length) % infraImages.length);
+  }
+
+  infraThumbs.forEach((thumb, i) => {
+    thumb.addEventListener('click', () => {
+      clearInterval(infraInterval);
+      showInfra(i);
+      infraInterval = setInterval(nextInfra, 3000);
+    });
+  });
+
+  infraPrev.onclick = () => {
+    clearInterval(infraInterval);
+    prevInfra();
+    infraInterval = setInterval(nextInfra, 3000);
+  };
+
+  infraNext.onclick = () => {
+    clearInterval(infraInterval);
+    nextInfra();
+    infraInterval = setInterval(nextInfra, 3000);
+  };
+
+  const infraModal = document.getElementById('infra-modal');
+  const infraModalImg = document.getElementById('infra-modal-img');
+  const infraClose = document.getElementById('infra-close');
+  const infraModalPrev = document.getElementById('infra-modal-prev');
+  const infraModalNext = document.getElementById('infra-modal-next');
+
+  infraMain.onclick = () => {
+    infraModal.style.display = 'flex';
+    infraModalImg.src = infraImages[infraCurrent];
+  };
+
+  infraClose.onclick = () => {
+    infraModal.style.display = 'none';
+  };
+
+  infraModalPrev.onclick = () => {
+    prevInfra();
+    infraModalImg.src = infraImages[infraCurrent];
+  };
+
+  infraModalNext.onclick = () => {
+    nextInfra();
+    infraModalImg.src = infraImages[infraCurrent];
+  };
+
+  showInfra(0);
+  infraInterval = setInterval(nextInfra, 3000);
+
+    function toggleBodyScroll(disable) {
+        if (disable) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }
+
+    const modals = document.querySelectorAll('.modal, #modal, #infra-modal');
+    const modalCloses = document.querySelectorAll('.modal-close');
+
+    modals.forEach(modal => {
+        const observer = new MutationObserver(() => {
+            if (modal.style.display === 'flex' || modal.style.display === 'block') {
+                toggleBodyScroll(true);
+            } else {
+                toggleBodyScroll(false);
+            }
+        });
+        observer.observe(modal, { attributes: true, attributeFilter: ['style'] });
+    });
+
+    modalCloses.forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            toggleBodyScroll(false);
+        });
+    });
+
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                toggleBodyScroll(false);
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function observeElements(selector, addClass = 'animate', threshold = 0.1) {
+        const elements = document.querySelectorAll(selector);
+        if (!elements.length) return;
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(addClass);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold });
+
+        elements.forEach(el => observer.observe(el));
+      }
+      observeElements('.feature-item');
+      observeElements('.itict-info-section .feature-block');
+      observeElements('.student-support-section .support-item');
+      observeElements('.teachers-section .teacher-item');
+      observeElements('.credit-section .animate', 'animated');
+      observeElements('.it-area', 'animated');
+      observeElements('.it-area, .profession-card', 'animated');
+    });
+</script>
+
 
 </body>
 </html>
